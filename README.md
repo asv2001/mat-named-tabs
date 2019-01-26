@@ -1,1 +1,1 @@
-# mat-named-tabs
+# Material Design Named Tabs support
