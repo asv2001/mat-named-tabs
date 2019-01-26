@@ -1,0 +1,34 @@
+{
+  "name": "mat-named-tabs",
+  "version": "1.0.0",
+  "description": "Angular material design named tabs",
+  "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asv2001/mat-named-tabs.git"
+  },
+  "keywords": [
+    "angular",
+    "angular 2",
+    "angular 4",
+    "angular 5",
+    "angular 6",
+    "angular 7",
+    "material design",
+    "angular material design",
+    "MatTab",
+    "MatTabGroup",
+    "selectedTab",
+    "selectedTabName",
+    "selectedTabId",
+    "selectedIndex",
+    "selectedId",
+    "selectedName"
+  ],
+  "author": "Anton Sinelnyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asv2001/mat-named-tabs/issues"
+  },
+  "homepage": "https://github.com/asv2001/mat-named-tabs"
+}
