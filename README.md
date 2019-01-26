@@ -2,7 +2,23 @@
 A tiny module that enables tab selection by id within Angular 2+ and Material Design. This module adds support of the directives with attribute selectors `selectedTabName` and `tabName`. You can also to listen to a `selectedTabNameChange`-event that will be triggered upon tab switch. Please see the example below.
 
 ## Example
-Component file:
+### Module file:
+```
+import { MatNamedTabsModule } from "mat-named-tabs";
+
+@NgModule({
+    imports: [
+        ...
+        MatNamedTabsModule,
+        ...
+    ],
+})
+export class SomeModule {
+
+}
+```
+
+### Component file:
 ```
 import { Component, Input } from "@angular/core";
 
@@ -20,7 +36,7 @@ export class TableDetailsComponent {
 }
 ```
 
-### In the HTML-file:
+### HTML-template file:
 
 ```
 <div>Active tab: {{tab}}</div>
