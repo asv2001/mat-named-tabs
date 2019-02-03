@@ -1,8 +1,11 @@
 {
   "name": "mat-named-tabs",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Angular material design named tabs",
   "main": "index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asv2001/mat-named-tabs.git"
@@ -31,7 +34,7 @@
     "url": "https://github.com/asv2001/mat-named-tabs/issues"
   },
   "homepage": "https://github.com/asv2001/mat-named-tabs",
-  "dev-dependencies": {
+  "devDependencies": {
     "@angular/core": "*",
     "@angular/material": "*",
     "rxjs": "*"
