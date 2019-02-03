@@ -39,6 +39,7 @@ export class SelectedTabNameDirective implements OnChanges, OnDestroy, AfterView
                 this.tabCollection.changes.subscribe((): void => this.preselectTab()),
                 this.matTabGroup.selectedTabChange.subscribe((): void => this.emitTabChange()),
             ];
+            this.preselectTab();
         }
     }
 

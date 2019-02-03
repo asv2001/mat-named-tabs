@@ -1,6 +1,6 @@
 {
   "name": "mat-named-tabs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Angular material design named tabs",
   "main": "index.ts",
   "scripts": {
