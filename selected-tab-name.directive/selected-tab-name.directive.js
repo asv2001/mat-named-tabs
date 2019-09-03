@@ -11,6 +11,7 @@ var tab_name_directive_1 = require("../tab-name.directive/tab-name.directive");
 var SelectedTabNameDirective = /** @class */ (function () {
     function SelectedTabNameDirective(matTabGroup) {
         this.matTabGroup = matTabGroup;
+        this.fallbackTabIndex = 0;
         this.selectedTabName = "";
         this.selectedTabNameChange = new core_1.EventEmitter();
         this.subscriptions = [];
@@ -43,6 +44,7 @@ var SelectedTabNameDirective = /** @class */ (function () {
                 this.tabCollection.changes.subscribe(function () { return _this.preselectTab(); }),
                 this.matTabGroup.selectedTabChange.subscribe(function () { return _this.emitTabChange(); }),
             ];
+            this.preselectTab();
         }
     };
     SelectedTabNameDirective.prototype.ngOnChanges = function (_a) {
@@ -63,6 +65,9 @@ var SelectedTabNameDirective = /** @class */ (function () {
             if (typeof result === "number") {
                 this.matTabGroup.selectedIndex = result;
             }
+            else if (typeof this.fallbackTabIndex === "number" && this.fallbackTabIndex >= 0) {
+                this.matTabGroup.selectedIndex = this.fallbackTabIndex;
+            }
         }
     };
     SelectedTabNameDirective.prototype.emitTabChange = function () {
@@ -71,6 +76,9 @@ var SelectedTabNameDirective = /** @class */ (function () {
             this.selectedTabNameChange.emit(tabName);
         }
     };
+    __decorate([
+        core_1.Input()
+    ], SelectedTabNameDirective.prototype, "fallbackTabIndex", void 0);
     __decorate([
         core_1.Input()
     ], SelectedTabNameDirective.prototype, "selectedTabName", void 0);

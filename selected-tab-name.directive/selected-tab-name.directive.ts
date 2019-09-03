@@ -8,6 +8,8 @@ import { TabNameDirective } from "../tab-name.directive/tab-name.directive";
 })
 export class SelectedTabNameDirective implements OnChanges, OnDestroy, AfterViewInit {
     @Input()
+    public fallbackTabIndex = 0;
+    @Input()
     public selectedTabName = "";
     @Output()
     public selectedTabNameChange: EventEmitter<string> = new EventEmitter<string>();
@@ -60,6 +62,8 @@ export class SelectedTabNameDirective implements OnChanges, OnDestroy, AfterView
 
             if (typeof result === "number") {
                 this.matTabGroup.selectedIndex = result;
+            } else if (typeof this.fallbackTabIndex === "number" && this.fallbackTabIndex >= 0) {
+                this.matTabGroup.selectedIndex = this.fallbackTabIndex;
             }
         }
     }
